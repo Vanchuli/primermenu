@@ -8,7 +8,7 @@ echo "Menu: "
 echo "1.Create a new contact" #Crea un nuevo contacto invocando a la funcion CreateContact
 echo "2.Search a contact" # Busca un contacto existente en el archivo contacts.txt con la funcion SearchContact
 echo "3.Help" # Muestra ayuda de como y que hace cada opcion
-echo "4. Exit" # Sale del programa terminando con el bucle 
+echo "4.Exit" # Sale del programa terminando con el bucle 
 
 }
 
@@ -29,7 +29,7 @@ read phone
 declare -a contacto=("$name", "$lastname", "$email", "$phone")
 contact=${contacto[@]}
 echo $contact >> contacts.txt
-echo "Contacto creado satisfactoriamente"
+echo "Contact created successfully"
 exit 0
 }
 
@@ -81,7 +81,7 @@ search_contact
 echo "Help:"
 echo "Option 1: Create  a new contact and stores it in contacts.txt"
 echo "Option 2: Search a contact in contacts.txt"
-echo "TO exit the menu press option 4"
+echo "To exit the menu press option 4"
 ;;
 
 4)
@@ -103,7 +103,7 @@ esac
 
 while true;do
 display_menu
-echo -n "Choose option"
+echo -n "Choose option: "
 read option
 select_option "$option"
 read -r
